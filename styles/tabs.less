@@ -1,0 +1,74 @@
+
+// Tabs
+// -------------------
+
+// Displays selectable tabs above the editor.
+// Overrides: atom/tabs
+
+.tab-bar {
+  background-color: @tab-bar-background-color;
+  width: 100%;
+
+  .tab {
+    color: @text-color;
+    height: @tab-height;
+    line-height: @tab-height;
+    font-size: @font-size;
+    background-color: @tab-background-color;
+    border-top-left-radius: @component-border-radius;
+    border-top-right-radius: @component-border-radius;
+
+    &[data-type='TreeView'] {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      padding-right: 10px;
+    }
+
+    &.active {
+      color: @text-color-selected;
+      background-color: @tab-background-color-active;
+    }
+
+    .close-icon {
+      transition: opacity .3s;
+      opacity: 0.5;
+    }
+
+    &:not(:hover) .close-icon {
+      opacity: 0;
+    }
+
+    // Modified Icon (the blue circle) -------------------
+    &.modified:not(:hover) .close-icon {
+      top: 50%;
+      right: @component-padding + 4px; // 4px -> half of icon size
+      margin-top: -3px;
+      border-color: @text-color-info;
+      opacity: 1;
+    }
+    &.modified:hover .close-icon {
+      color: currentColor;
+    }
+
+    // Close Icon (the X) -------------------
+    .close-icon:hover {
+      color: @text-color-selected;
+      opacity: 1;
+    }
+    &.active .close-icon:hover {
+      color: @text-color;
+    }
+
+    // Dragging -------------------
+    // Styles get applied while dragging a tab
+    &.is-dragging {
+      background: darken(@tab-background-color, 10%);
+      border-color: transparent;
+      opacity: 0.5;
+      & .close-icon {
+        visibility: hidden;
+      }
+    }
+  }
+}

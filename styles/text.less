@@ -1,0 +1,67 @@
+
+// Text
+// -------------------
+
+.text-smaller {
+  font-size: smaller;
+}
+
+.text-subtle    { color: @text-color-subtle; }
+.text-highlight { color: @text-color-highlight; }
+
+.text-info    { color: @text-color-info; }
+.text-success { color: @text-color-success; }
+.text-warning { color: @text-color-warning; }
+.text-error   { color: @text-color-error; }
+
+
+// Highlights ---------------
+
+.highlight         { .highlight-mixin(@background-color-highlight); }
+.highlight-info    { .highlight-mixin(@background-color-info); }
+.highlight-warning { .highlight-mixin(@background-color-warning); }
+.highlight-error   { .highlight-mixin(@background-color-error); }
+.highlight-success { .highlight-mixin(@background-color-success); }
+
+.highlight-mixin(@color) {
+  padding: 1px 4px;
+  color: @text-color-highlight;
+  border-radius: @component-border-radius;
+  background-color: @color;
+}
+
+
+// Background Message ---------------
+// Shown when no tabs are open.
+
+.background-message {
+  font-weight: bold;
+  color: @text-color-subtle;
+}
+
+// make background tips smaller and less intrusive
+background-tips {
+  opacity: 0.5;
+
+  ul.background-message {
+    font-size: 12px;
+  }
+  ul.background-message.centered {
+    align-items: flex-end;
+    padding-bottom: 20px;
+  }
+  ul.background-message .message {
+    transition: opacity .3s ease-in-out, transform .3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transform: translateY(20px);
+
+    &.fade-in {
+      transition: opacity .3s ease-in-out, transform .3s cubic-bezier(0.215, 0.61, 0.355, 1);
+      transform: none;
+    }
+  }
+}
+
+
+label {
+  font-weight: normal;
+}

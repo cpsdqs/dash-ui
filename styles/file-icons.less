@@ -1,0 +1,84 @@
+// File Icons
+
+@font-face {
+  font-family: dash-icons;
+  src: url('atom://dash-ui/fonts/icons.woff2') format('woff2');
+}
+
+.file-icon-content (@type, @color) {
+  font-family: dash-icons, Inconsolata;
+  text-rendering: geometricPrecision;
+  font-style: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-decoration: none;
+  text-transform: none;
+  content: @type;
+  color: @color;
+}
+.file-icon (@type, @color) {
+  .name[data-name$='.@{type}']::before {
+    .file-icon-content(@type, @color);
+  }
+}
+.file-icon-linear-gradient (@type, @color) {
+  .name[data-name$='.@{type}']::before {
+    .file-icon-content(@type, transparent);
+    -webkit-background-clip: text;
+    background: @color;
+  }
+}
+
+.tree-view .file {
+  .name::before {
+    .file-icon-content('file', inherit);
+  }
+  .name.icon-file-symlink-file::before {
+    .file-icon-content('symlink', inherit);
+  }
+  .name.icon-file-zip::before {
+    .file-icon-content('zip', inherit);
+  }
+  .name.icon-file-media::before {
+    .file-icon-content('media', inherit);
+  }
+}
+.tree-view .file {
+  .file-icon('c', #02f093);
+  .file-icon('md', #eee);
+  .file-icon('cc', #0285f0);
+  .file-icon('sh', #a420c6);
+  .file-icon('rs', #d9d9d9);
+  .file-icon('js', #fee12a);
+  .file-icon('cpp', #0285f0);
+  .file-icon('tex', #fff);
+  .file-icon('zip', #8cc3e6);
+  .file-icon('git', inherit);
+  .file-icon('c++', #0285f0);
+  .file-icon('svg', #d6913f);
+  .file-icon('pdf', #c94949);
+  .file-icon('map', #cc3a6a);
+  .file-icon('css', #3e8cd5);
+  .file-icon('html', #f45c3a);
+  .file-icon('icns', inherit);
+  .file-icon('file', inherit);
+  .file-icon('sass', #b37399);
+  .file-icon('less', #3b6fb9);
+  .file-icon('json', #fee12a);
+  .file-icon('node', #63c459);
+  .file-icon('cson', #6683c4);
+  .file-icon('mdown', #eee);
+  .file-icon('plist', #ababab);
+  .file-icon('media', inherit);
+  .file-icon('swift', #f95f37);
+  .file-icon('sketch', #f8c332);
+  .file-icon('coffee', #6683c4);
+  .file-icon('babelrc', #f9dc3e);
+  .file-icon('symlink', inherit);
+  .file-icon('markdown', #eee);
+  .file-icon('amp.html', #f7c23a);
+  .file-icon('DS_Store', inherit);
+  .file-icon('gitignore', inherit);
+  .file-icon('flowconfig', #ffce39);
+  .file-icon('eslintignore', #8080f2);
+}

@@ -1,0 +1,76 @@
+
+// Tree View
+// -------------------
+
+// Used to explore and open files in the current project.
+// Overrides: atom/tree-view
+
+
+.tree-view-resizer {
+  // border-right: 1px solid @base-border-color;
+}
+
+.tree-view {
+  color: @text-color;
+  background-color: @tree-view-background-color;
+
+  & > .directory {
+    &::before {
+      height: @tab-height;
+    }
+
+    .header.list-item.project-root-header {
+      line-height: @tab-height;
+    }
+  }
+
+  .entry:not([class^='status']):not([class*=' status']) {
+    color: @text-color;
+  }
+
+  .list-item.selected {
+    &::before {
+      background-color: @base-background-color;
+      left: @component-icon-size;
+      border-top-left-radius: @component-border-radius;
+      border-bottom-left-radius: @component-border-radius;
+
+      @keyframes tree-view-list-item-selected-before {
+        from { z-index: -1 }
+        to { z-index: -1 }
+      }
+      animation: tree-view-list-item-selected-before 1s;
+    }
+    &::after {
+      content: '';
+      background-image: linear-gradient(to right, @background-color-selected, transparent);
+      position: absolute;
+      left: @component-icon-size;
+      right: 0;
+      height: 25px;
+      opacity: 0;
+      pointer-events: none;
+
+      @keyframes tree-view-list-item-selected-after {
+        0% {
+          transform: translateX(100%);
+          opacity: 0;
+          z-index: -1;
+        }
+        50% {
+          transform: none;
+          opacity: 0.3;
+          z-index: -1;
+          animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        100% {
+          transform: none;
+          opacity: 0;
+          z-index: -1;
+        }
+      }
+
+      animation: tree-view-list-item-selected-after 1s;
+    }
+  }
+}

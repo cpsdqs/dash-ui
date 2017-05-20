@@ -1,0 +1,28 @@
+
+// Controls
+
+progress {
+  -webkit-appearance: none;
+  @progress-bar-height: @component-border-radius * 2 + 2px;
+
+  &::-webkit-progress-inner-element {
+    padding-top: ~"calc((1em - @{progress-bar-height}) / 2)";
+  }
+
+  &::-webkit-progress-bar {
+    border-radius: @component-border-radius * 2;
+    height: @component-border-radius * 2 + 2px;
+    border: 1px solid @button-border-color;
+    background-color: @button-background-color;
+  }
+
+  &:not([value])::-webkit-progress-bar {
+    background-image: linear-gradient(to right, lighten(@text-color-info, 10%), darken(@background-color-info, 10%));
+    // animation isn't supported :(
+  }
+
+  &::-webkit-progress-value {
+    background-color: @background-color-info;
+    border-radius: @component-border-radius * 2;
+  }
+}
