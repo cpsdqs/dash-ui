@@ -26,3 +26,19 @@ progress {
     border-radius: @component-border-radius * 2;
   }
 }
+
+.scrollbars-visible-always {
+  ::-webkit-scrollbar {
+    background-color: none;
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-corner {
+    background-color: inherit;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: @background-color-highlight;
+    border-radius: 5px;
+    border: 3px solid @base-background-color;
+  }
+}
