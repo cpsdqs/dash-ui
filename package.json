@@ -1,7 +1,7 @@
 {
   "name": "dash-ui",
   "theme": "ui",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "./lib/dash-ui",
   "description": "Matching UI theme for dash-syntax",
   "keywords": [
