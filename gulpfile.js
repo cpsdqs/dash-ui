@@ -11,7 +11,7 @@ gulp.task('generate-less', function () {
   let files = fs.readdirSync('icons/')
   let colors = cson.parseCSONFile('icons/colors.cson')
   let content = fs.readFileSync('styles/file-icons-header.less', 'utf8')
-  content += '.tree-view .file {\n' + files
+  content += '.dash-icons-enabled .tree-view .file {\n' + files
     .map(file => path.parse(file))
     .filter(file => file.ext === '.svg')
     .sort((a, b) => a.name.length - b.name.length)
