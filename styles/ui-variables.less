@@ -17,8 +17,7 @@
 @dark-gray: #232b32;
 @very-dark-gray: #181d22;
 
-@accent: #f54784;
-
+@pink: #f54784;
 @red: #ff4454;
 @orange: #ed9b50;
 @yellow: #ffb91b;
@@ -28,6 +27,8 @@
 @blue: #5b85ff;
 @indigo: #637bc5;
 @purple: #8c63d9;
+
+@import 'theme';
 
 // Text Colors
 @text-color:           @light-gray;
@@ -49,6 +50,8 @@
 @background-color-highlight: lighten(@base-background-color, 5%);
 @background-color-selected:  lighten(@base-background-color, 10%);
 @app-background-color:       darken(@base-background-color, 5%);
+
+@background-color-tooltip: darken(@accent, 10%);
 
 // Base colors
 @base-background-color: @very-dark-gray;

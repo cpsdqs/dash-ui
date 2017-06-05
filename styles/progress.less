@@ -14,21 +14,16 @@
 .loading-spinner-tiny   { .loading-spinner(16px); }
 
 .loading-spinner(@size) {
+  position: relative;
   display: block;
   width: @size;
   height: @size;
-  background-image: url(images/octocat-spinner-128.gif);
-  background-repeat: no-repeat;
-  background-size: @size @size;
+  background-image: none;
+  background: none;
+
   &.inline-block {
     display: inline-block;
   }
-}
-
-.loading-spinner-tiny, .loading-spinner-small,
-.loading-spinner-medium, .loading-spinner-large {
-  background-image: none;
-  position: relative;
 
   &::before {
     content: '';

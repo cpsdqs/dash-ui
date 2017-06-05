@@ -20,9 +20,29 @@
     "gulp-webfont": "0.0.1-3"
   },
   "configSchema": {
-    "iconsEnabled": {
-      "title": "Enable File Icons",
+    "themeColor": {
+      "title": "Theme Color",
       "order": 1,
+      "description": "The UI accent color",
+      "type": "string",
+      "enum": [
+        "Pink",
+        "Red",
+        "Orange",
+        "Yellow",
+        "Teal",
+        "Green",
+        "Cyan",
+        "Blue",
+        "Indigo",
+        "Purple",
+        "White"
+      ],
+      "default": "Pink"
+    },
+    "iconsEnabled": {
+      "title": "File Icons",
+      "order": 2,
       "description": "Disable this if you don't want to use the file icons.",
       "type": "boolean",
       "default": true
