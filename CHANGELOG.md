@@ -1,5 +1,12 @@
 ## 0.4.0
 * Added theming
+* Added icons for:
+  - Objective C
+  - TOML
+  - Common Lisp
+  - Haskell
+  - TXT
+  - Header files
 ## 0.3.0
 * Added settings
 ## 0.2.0
