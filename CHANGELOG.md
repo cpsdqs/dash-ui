@@ -1,3 +1,7 @@
+## 0.4.2
+* Added icon for jsx
+## 0.4.1
+* Added icon for htm
 ## 0.4.0
 * Added theming
 * Added icons for:

@@ -20,6 +20,7 @@ hpp: '#2165b6'
 'h++': '#2165b6'
 java: '#f8981d' # ['linear', 'to bottom right', '#f8981d', '#5382a1']
 js: '#fee12a'
+jsx: '#fee12a'
 json: '#fee12a'
 less: '#3b6fb9'
 lisp: '#d74f4f'
