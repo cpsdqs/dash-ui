@@ -17,12 +17,12 @@
   color: @color;
 }
 .file-icon (@type, @color) {
-  .name[data-name$='.@{type}']::before {
+  .name[data-name$='.@{type}']::before, .name[data-name='@{type}']::before {
     .file-icon-content(@type, @color);
   }
 }
 .file-icon-linear-gradient (@type, @color) {
-  .name[data-name$='.@{type}']::before {
+  .name[data-name$='.@{type}']::before, .name[data-name='@{type}']::before {
     .file-icon-content(@type, transparent);
     -webkit-background-clip: text;
     background: @color;
@@ -44,67 +44,80 @@
   }
 }
 .dash-icons-enabled .tree-view .file {
+  .file-icon('m', #4195fa);
   .file-icon('h', #2165b6);
   .file-icon('c', #02f093);
   .file-icon('l', #d74f4f);
-  .file-icon('m', #4195fa);
-  .file-icon('hh', #2165b6);
-  .file-icon('sh', #a420c6);
-  .file-icon('hs', #738087);
-  .file-icon('cc', #0285f0);
-  .file-icon('js', #fee12a);
-  .file-icon('cl', #d74f4f);
-  .file-icon('rs', #d9d9d9);
   .file-icon('db', #70a8c7);
+  .file-icon('sh', #a420c6);
+  .file-icon('rs', #d9d9d9);
+  .file-icon('hh', #2165b6);
+  .file-icon('cc', #0285f0);
+  .file-icon('hs', #738087);
   .file-icon('rb', #b31301);
-  .file-icon('md', #eee);
+  .file-icon('js', #fee12a);
   .file-icon('py', #5a9fd4);
-  .file-icon('css', #3e8cd5);
+  .file-icon('cl', #d74f4f);
+  .file-icon('md', #eee);
+  .file-icon('log', #bdbdbd);
+  .file-icon('xml', #f4b53a);
+  .file-icon('git', inherit);
+  .file-icon('c++', #0285f0);
+  .file-icon('h++', #2165b6);
+  .file-icon('vue', #41b883);
+  .file-icon('cpp', #0285f0);
   .file-icon('hpp', #2165b6);
   .file-icon('txt', #eee);
-  .file-icon('htm', inherit);
-  .file-icon('c++', #0285f0);
-  .file-icon('jsx', #fee12a);
-  .file-icon('tex', #fff);
-  .file-icon('lhs', #738087);
-  .file-icon('svg', #d6913f);
-  .file-icon('lsp', #d74f4f);
-  .file-icon('git', inherit);
-  .file-icon('map', #cc3a6a);
-  .file-icon('zip', #8cc3e6);
-  .file-icon('h++', #2165b6);
+  .file-icon('css', #3e8cd5);
+  .file-icon('htm', #f45c3a);
   .file-icon('pyo', #ffe839);
-  .file-icon('pdf', #c94949);
-  .file-icon('php', #5e77a5);
   .file-icon('pyd', #306998);
-  .file-icon('cpp', #0285f0);
   .file-icon('pyc', #ffd43b);
-  .file-icon('html', #f45c3a);
-  .file-icon('icns', inherit);
+  .file-icon('zip', #8cc3e6);
+  .file-icon('eot', #59aade);
+  .file-icon('jsx', #fee12a);
+  .file-icon('ttf', #59aade);
+  .file-icon('php', #5e77a5);
+  .file-icon('lhs', #738087);
+  .file-icon('pdf', #c94949);
+  .file-icon('otf', #59aade);
+  .file-icon('npm', inherit);
+  .file-icon('tex', #fff);
+  .file-icon('lsp', #d74f4f);
+  .file-icon('svg', #d6913f);
+  .file-icon('map', #cc3a6a);
   .file-icon('java', #f8981d);
-  .file-icon('file', inherit);
-  .file-icon('json', #fee12a);
-  .file-icon('rake', #e82609);
-  .file-icon('toml', inherit);
+  .file-icon('toml', #aaa);
+  .file-icon('fasl', #d74f4f);
   .file-icon('node', #63c459);
+  .file-icon('lock', #6f6f6f);
+  .file-icon('file', inherit);
+  .file-icon('cson', #6683c4);
+  .file-icon('woff', #59aade);
+  .file-icon('lisp', #d74f4f);
   .file-icon('less', #3b6fb9);
   .file-icon('sass', #b37399);
-  .file-icon('cson', #6683c4);
-  .file-icon('lisp', #d74f4f);
-  .file-icon('fasl', #d74f4f);
-  .file-icon('plist', #ababab);
+  .file-icon('json', #fee12a);
+  .file-icon('rake', #e82609);
+  .file-icon('icns', inherit);
+  .file-icon('html', #f45c3a);
   .file-icon('mdown', #eee);
+  .file-icon('plist', #ababab);
+  .file-icon('woff2', #59aade);
   .file-icon('swift', #f95f37);
   .file-icon('media', inherit);
-  .file-icon('sketch', #f8c332);
   .file-icon('coffee', #6683c4);
-  .file-icon('symlink', inherit);
+  .file-icon('sketch', #f8c332);
   .file-icon('babelrc', #f9dc3e);
+  .file-icon('symlink', inherit);
+  .file-icon('htaccess', #f69923);
   .file-icon('amp.html', #f7c23a);
   .file-icon('markdown', #eee);
   .file-icon('DS_Store', inherit);
   .file-icon('gitignore', inherit);
   .file-icon('litcoffee', #6683c4);
+  .file-icon('npmignore', #cb3837);
   .file-icon('flowconfig', #ffce39);
   .file-icon('eslintignore', #8080f2);
+  .file-icon('package.json', #cb3837);
 }

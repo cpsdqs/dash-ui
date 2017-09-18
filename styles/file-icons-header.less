@@ -17,12 +17,12 @@
   color: @color;
 }
 .file-icon (@type, @color) {
-  .name[data-name$='.@{type}']::before {
+  .name[data-name$='.@{type}']::before, .name[data-name='@{type}']::before {
     .file-icon-content(@type, @color);
   }
 }
 .file-icon-linear-gradient (@type, @color) {
-  .name[data-name$='.@{type}']::before {
+  .name[data-name$='.@{type}']::before, .name[data-name='@{type}']::before {
     .file-icon-content(@type, transparent);
     -webkit-background-clip: text;
     background: @color;
