@@ -1,3 +1,9 @@
+## 0.4.4
+* Added icons for:
+  - pug
+  - styl
+  - scss
+* Updated sass icon to be the actual sass logo
 ## 0.4.3
 * Added icons for:
   - vue
